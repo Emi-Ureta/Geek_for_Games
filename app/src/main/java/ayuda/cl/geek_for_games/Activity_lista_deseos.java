@@ -53,4 +53,3 @@ public class Activity_lista_deseos extends AppCompatActivity implements AdapterV
     }
     }
 
-}
