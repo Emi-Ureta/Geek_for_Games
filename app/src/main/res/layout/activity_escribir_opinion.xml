@@ -12,7 +12,7 @@
         android:layout_width="318dp"
         android:layout_height="176dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="204dp"
+        android:layout_marginBottom="188dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Escriba su reseña aquí..."
@@ -32,21 +32,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/Spinner_opinion_plataforma"
-        android:layout_width="317dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="112dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -92,5 +83,14 @@
         android:text="Publicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_opinion"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
