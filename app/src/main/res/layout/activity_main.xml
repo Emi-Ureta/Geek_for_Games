@@ -12,4 +12,12 @@
         android:layout_height="wrap_content"
         tools:context=".MainActivity"></androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!--carrusel o cardview para mostrar las plataformas posibles
+
+     reycler view para opiniones??
+     probar nested view
+
+
+        -->
+
 </ScrollView>

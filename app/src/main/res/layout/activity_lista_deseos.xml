@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Activity_lista_deseos">
 
+    <Spinner
+        android:id="@+id/spinner_deseos"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="126dp"
@@ -121,10 +130,10 @@
         </LinearLayout>
     </ScrollView>
 
-    <Spinner
-        android:id="@+id/spinner_deseos"
-        android:layout_width="116dp"
-        android:layout_height="48dp"
-        tools:layout_editor_absoluteY="221dp" />
 
+    <!--
+    poner las fotos dentro del scrollview o crear distintas paginas
+    mostrar los juegos deseados con cardview ???
+
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
