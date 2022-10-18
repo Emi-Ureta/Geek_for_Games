@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "367984301701",
+    "project_id": "geek-for-games",
+    "storage_bucket": "geek-for-games.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367984301701:android:e5a94f915f5bcd5b5cbbec",
+        "android_client_info": {
+          "package_name": "ayuda.cl.geek_for_games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367984301701-5ll08bp0ssgu7e56altsvckbofg9819b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgN31YksPWSg7v7z_uLMjTc4ojT0xsnxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367984301701-5ll08bp0ssgu7e56altsvckbofg9819b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
