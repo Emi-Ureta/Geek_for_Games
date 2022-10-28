@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseFirestore firestore;
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
