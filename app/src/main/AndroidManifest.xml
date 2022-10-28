@@ -28,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity_login"
+            android:name=".Activity_login"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
