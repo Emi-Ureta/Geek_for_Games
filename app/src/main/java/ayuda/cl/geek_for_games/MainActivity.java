@@ -30,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Activity_login.class));
             }
         });
+
+
+
     }
+
+
 
 
 }
