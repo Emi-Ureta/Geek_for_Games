@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity_inicio extends AppCompatActivity {
 
     FirebaseFirestore firestore;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inicio);
 
         firestore = FirebaseFirestore.getInstance();
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Activity_login.class));
+                startActivity(new Intent(Activity_inicio.this, Activity_login.class));
             }
         });
 

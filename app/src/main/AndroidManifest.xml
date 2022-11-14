@@ -69,7 +69,7 @@
             android:name=".Activity_escribir_opinion"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity_inicio"
             android:exported="false">
 
         </activity>

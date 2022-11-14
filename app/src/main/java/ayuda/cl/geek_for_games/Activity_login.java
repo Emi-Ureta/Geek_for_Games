@@ -7,12 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class Activity_login extends AppCompatActivity {
+
+    FirebaseFirestore firestore;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        firestore = FirebaseFirestore.getInstance();
+
+
         TextView btn=findViewById(R.id.Text_view_crear_cuenta_login);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
