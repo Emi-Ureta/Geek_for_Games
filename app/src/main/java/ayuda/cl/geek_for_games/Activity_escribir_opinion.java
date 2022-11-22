@@ -2,10 +2,12 @@ package ayuda.cl.geek_for_games;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -39,6 +41,32 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner_op.setAdapter(adaptador);
+
+
+        Button btn_inicio = findViewById(R.id.Button_inicio_inicio);
+        btn_inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_escribir_opinion.this, Activity_inicio.class));
+            }
+        });
+
+        Button btn_favs = findViewById(R.id.Button_favoritos);
+        btn_favs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_escribir_opinion.this, Activity_lista_deseos.class));
+            }
+        });
+
+
+        Button btn_mapa = findViewById(R.id.Button_mapa);
+        btn_mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_escribir_opinion.this, MapaActivity.class));
+            }
+        });
 
     }
 

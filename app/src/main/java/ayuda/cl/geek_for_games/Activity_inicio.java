@@ -32,6 +32,23 @@ public class Activity_inicio extends AppCompatActivity {
             }
         });
 
+        Button btn_opinion = findViewById(R.id.Button_inicio_escribir);
+        btn_opinion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_inicio.this, Activity_escribir_opinion.class));
+            }
+        });
+
+        Button btn_favs = findViewById(R.id.Button_favoritos);
+        btn_favs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_inicio.this, Activity_lista_deseos.class));
+            }
+        });
+
+
         Button btn_mapa = findViewById(R.id.Button_mapa);
         btn_mapa.setOnClickListener(new View.OnClickListener() {
             @Override
