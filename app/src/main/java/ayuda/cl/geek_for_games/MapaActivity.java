@@ -79,26 +79,26 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.moveCamera(CameraUpdateFactory.newLatLng(chillan));
 
         LatLng microplay = new LatLng(-36.60961692116919, -72.10067318817647);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Microplay"));
+        mMap.addMarker(new MarkerOptions().position(microplay).title("Microplay"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(microplay));
 
 
         LatLng ripley = new LatLng(-36.60877701231661, -72.10166896092169);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Ripley"));
+        mMap.addMarker(new MarkerOptions().position(ripley).title("Ripley"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(ripley));
 
         LatLng njoystick = new LatLng(-36.608411755746545, -72.1028380581252);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Njoystick"));
+        mMap.addMarker(new MarkerOptions().position(njoystick).title("Njoystick"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(njoystick));
 
 
         LatLng junix = new LatLng(-36.60901461842825, -72.10129310581279);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Junix Games"));
+        mMap.addMarker(new MarkerOptions().position(junix).title("Junix Games"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(junix));
 
 
         LatLng next = new LatLng(-36.60501841217301, -72.10558464001394);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Next Game Cyber"));
+        mMap.addMarker(new MarkerOptions().position(next).title("Next Game Cyber"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(next));
 
 
