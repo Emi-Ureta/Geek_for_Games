@@ -19,6 +19,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import ayuda.cl.geek_for_games.databinding.ActivityMapaBinding;
 
@@ -28,6 +32,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ActivityMapaBinding LatLng;
 
     private FusedLocationProviderClient mFusedLocationClient;
+    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +60,12 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onSuccess(Location location) {
                         if (location != null) {
                             Log.e("Latitud: ", + location.getLatitude() + "Longitud: " + location.getLongitude());
+
+                            Map<String,Object> latlong = new HashMap<>();
+                            latlong.put("latitud", location.getLatitude());
+                            latlong.put("longitud", location.getLongitude());
+                            mDatabase.child("ubicacion_usuarios").push().setValue(latlong);
+
                         }
                     }
                 });
