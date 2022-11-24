@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Activity_inicio extends AppCompatActivity {
@@ -16,12 +18,17 @@ public class Activity_inicio extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
         firestore = FirebaseFirestore.getInstance();
+
+
 
 
         TextView btn=findViewById(R.id.textView);
@@ -54,6 +61,7 @@ public class Activity_inicio extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Activity_inicio.this, MapaActivity.class));
+                myRef.setValue("Ingreso de usuario al mapa desde ventana inicio");
             }
         });
 

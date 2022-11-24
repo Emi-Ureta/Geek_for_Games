@@ -44,39 +44,15 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        mFusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        if (location != null) {
-                            Log.e("Latitud: ", + location.getLatitude() + "Longitud: " + location.getLongitude());
 
-                            Map<String,Object> latlong = new HashMap<>();
-                            latlong.put("latitud", location.getLatitude());
-                            latlong.put("longitud", location.getLongitude());
-                            mDatabase.child("ubicacion_usuarios").push().setValue(latlong);
-
-                        }
-                    }
-                });
     }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng chillan = new LatLng(-36.60787975863577, -72.10238905258322);
-        mMap.addMarker(new MarkerOptions().position(chillan).title("Chillán"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(chillan));
+        //LatLng chillan = new LatLng(-36.60787975863577, -72.10238905258322);
+        //mMap.addMarker(new MarkerOptions().position(chillan).title("Chillán"));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(chillan));
 
         LatLng microplay = new LatLng(-36.60961692116919, -72.10067318817647);
         mMap.addMarker(new MarkerOptions().position(microplay).title("Microplay"));

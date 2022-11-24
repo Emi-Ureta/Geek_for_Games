@@ -10,10 +10,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Activity_escribir_opinion extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +72,7 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Activity_escribir_opinion.this, MapaActivity.class));
+                myRef.setValue("Ingreso de usuario al mapa desde ventana opinion");
             }
         });
 

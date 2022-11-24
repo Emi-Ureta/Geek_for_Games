@@ -10,6 +10,7 @@
         android:id="@+id/Text_view_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="92dp"
         android:text="Geek for Games "
@@ -17,12 +18,14 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Edit_text_login_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
         android:layout_marginTop="236dp"
         android:layout_marginEnd="100dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
@@ -32,12 +35,14 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Edit_text_login_contra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
         android:layout_marginTop="312dp"
         android:layout_marginEnd="100dp"
         android:drawableLeft="@drawable/ic_baseline_info_24"
@@ -48,22 +53,26 @@
         android:minHeight="48dp"
         android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/Button_login_entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="232dp"
         android:text="Iniciar sesión"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Text_view_olvide_contra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="304dp"
         android:clickable="true"
@@ -72,7 +81,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <LinearLayout
@@ -98,25 +108,29 @@
         android:id="@+id/text_view_otro_ingreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="144dp"
         android:text="Ingresar con"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Text_view_crear_cuenta_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="40dp"
         android:text="¿No tiene cuenta? Crear usuario"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
