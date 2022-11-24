@@ -50,9 +50,10 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
-        //LatLng chillan = new LatLng(-36.60787975863577, -72.10238905258322);
+        LatLng chillan = new LatLng(-36.60787975863577, -72.10238905258322);
         //mMap.addMarker(new MarkerOptions().position(chillan).title("Chillán"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(chillan));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(chillan,15));
+
 
         LatLng microplay = new LatLng(-36.60961692116919, -72.10067318817647);
         mMap.addMarker(new MarkerOptions().position(microplay).title("Microplay"));
