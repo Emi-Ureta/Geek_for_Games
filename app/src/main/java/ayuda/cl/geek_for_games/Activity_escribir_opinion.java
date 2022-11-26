@@ -34,7 +34,7 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
         spinner_op.setOnItemSelectedListener( this);
 
         //Elementos para spinner
-        List<String> plataforma = new ArrayList<String>();
+        List<String> plataforma = new ArrayList<>();
         plataforma.add("PS5");
         plataforma.add("Xbox X");
         plataforma.add("PS4");

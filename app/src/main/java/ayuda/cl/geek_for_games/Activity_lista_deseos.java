@@ -35,7 +35,7 @@ public class Activity_lista_deseos extends AppCompatActivity implements AdapterV
         spinner_lista_deseos.setOnItemSelectedListener(this);
 
         //Elementos para spinner
-        List<String> plataforma_deseos = new ArrayList<String>();
+        List<String> plataforma_deseos = new ArrayList<>();
         plataforma_deseos.add("PS5");
         plataforma_deseos.add("Xbox X");
         plataforma_deseos.add("PS4");

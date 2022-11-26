@@ -20,6 +20,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -43,8 +44,43 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        LatLongFirebase();
 
 
+    }
+
+
+    private void LatLongFirebase() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        mFusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+
+                            Map<String, Object> latlng = new HashMap<>();
+                            latlng.put("latitud", location.getLatitude());
+
+                            latlng.put("longitud", location.getLongitude());
+
+
+                            Log.e("Latitud: ", location.getLatitude() + " Longitud: " + location.getLongitude());
+                            mDatabase.child("ubicacion_usuarios").push().setValue(latlng);
+                        }
+                    }
+                });
     }
 
     @Override
