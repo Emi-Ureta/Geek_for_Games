@@ -16,24 +16,32 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import ayuda.cl.geek_for_games.databinding.ActivityMapaBinding;
 
 public class MapaActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    private int MY_PERMISSIONS_REQUEST_READ_CONTACTS ;
     private GoogleMap mMap;
-    private ActivityMapaBinding LatLng;
+
 
     private FusedLocationProviderClient mFusedLocationClient;
     DatabaseReference mDatabase;
+    private ArrayList<Marker> tmpUbicacionMarker = new ArrayList<>();
+    private ArrayList<Marker>  ubicacionMarker = new ArrayList<Marker>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,33 +62,25 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void LatLongFirebase() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
+            ActivityCompat.requestPermissions(MapaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_READ_CONTACTS);
             return;
         }
-        mFusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
+            mFusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            // Got last known location. In some rare situations this can be null.
+                            if (location != null) {
+                                Log.e("Latitud: ", location.getLatitude() + " Longitud: " + location.getLongitude());
 
-                            Map<String, Object> latlng = new HashMap<>();
-                            latlng.put("latitud", location.getLatitude());
-
-                            latlng.put("longitud", location.getLongitude());
-
-
-                            Log.e("Latitud: ", location.getLatitude() + " Longitud: " + location.getLongitude());
-                            mDatabase.child("ubicacion_usuarios").push().setValue(latlng);
+                                Map<String, Object> latlng = new HashMap<>();
+                                latlng.put("latitud", location.getLatitude());
+                                latlng.put("longitud", location.getLongitude());
+                                mDatabase.child("ubicacion_usuarios").push().setValue(latlng);
+                            }
                         }
-                    }
-                });
+                    });
     }
 
     @Override
@@ -114,6 +114,37 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(next).title("Next Game Cyber"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(next));
 
+
+        // ubicacion de usuarios al momento de usar el mapa
+        mDatabase.child("ubicacion_usuarios").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(Marker marker:ubicacionMarker){
+                    marker.remove();
+                }
+
+                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+
+                    Mapa_ubicacion mu = snapshot.getValue(Mapa_ubicacion.class);
+                    Double latitud = mu.getLatitud();
+                    Double longitud = mu.getLongitud();
+                    MarkerOptions markerOptions = new MarkerOptions();
+                    markerOptions.position(new LatLng(latitud,longitud)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)).title("Ubicación Actual");
+
+
+                    tmpUbicacionMarker.add(mMap.addMarker(markerOptions));
+                }
+
+                ubicacionMarker.clear();
+                ubicacionMarker.addAll(tmpUbicacionMarker);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
 
