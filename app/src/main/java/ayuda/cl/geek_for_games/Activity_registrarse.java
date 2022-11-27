@@ -1,6 +1,6 @@
 package ayuda.cl.geek_for_games;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -13,9 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,8 +23,6 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
 
 
     private EditText nombre, correo, contra, contra_verificar;
-    private Button registrar;
-
 
 
     @SuppressLint("MissingInflatedId")
@@ -38,36 +34,28 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        registrar = (Button) findViewById(R.id.Button_login);
+        Button registrar = findViewById(R.id.Button_login);
         registrar.setOnClickListener(this);
 
-        nombre = (EditText) findViewById(R.id.Edit_text_registro_usuario);
-        correo = (EditText) findViewById(R.id.edit_text_registro_correo);
-        contra = (EditText) findViewById(R.id.Edit_text_login_contra);
-        contra_verificar = (EditText) findViewById(R.id.Edit_text_registro_contra_verificar);
+        nombre = findViewById(R.id.Edit_text_registro_usuario);
+        correo = findViewById(R.id.edit_text_registro_correo);
+        contra = findViewById(R.id.Edit_text_login_contra);
+        contra_verificar = findViewById(R.id.Edit_text_registro_contra_verificar);
 
 
 
 
         //cambio activity a login
         TextView btn=findViewById(R.id.Text_view_cuenta_registro);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_registrarse.this, Activity_login.class));
-            }
-        });
+        btn.setOnClickListener(view -> startActivity(new Intent(Activity_registrarse.this, Activity_login.class)));
 
     }
 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.Button_login:
-                registrar_usuario();
-                break;
-
+        if (v.getId() == R.id.Button_login) {
+            registrar_usuario();
         }
     }
 
@@ -108,27 +96,21 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
         }
 
 
-        mAuth.createUserWithEmailAndPassword(Correo, Contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Usuario usuario = new Usuario(Nombre, Correo, Contra);
+        mAuth.createUserWithEmailAndPassword(Correo, Contra).addOnCompleteListener(task -> {
+            if (task.isSuccessful()){
+                Usuario usuario = new Usuario(Nombre, Correo, Contra);
 
-                    FirebaseDatabase.getInstance().getReference("Usuarios").child(FirebaseAuth.getInstance().
-                            getCurrentUser().getUid()).setValue(usuario).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                             if(task.isSuccessful()){
+                FirebaseDatabase.getInstance().getReference("Usuarios").child(FirebaseAuth.getInstance().
+                        getCurrentUser().getUid()).setValue(usuario).addOnCompleteListener(task1 -> {
+                             if(task1.isSuccessful()){
                                  Toast.makeText(Activity_registrarse.this, "Usuario creado de manera exitosa", Toast.LENGTH_LONG).show();
                                  startActivity(new Intent(Activity_registrarse.this, Activity_login.class));
                              }else{
                                  Toast.makeText(Activity_registrarse.this, "", Toast.LENGTH_LONG).show();
                              }
-                        }
-                    });
-                }else{
-                    Toast.makeText(Activity_registrarse.this, "Se ha producido un error, vuelve a intentarlo", Toast.LENGTH_LONG).show();
-                }
+                        });
+            }else{
+                Toast.makeText(Activity_registrarse.this, "Se ha producido un error, vuelve a intentarlo", Toast.LENGTH_LONG).show();
             }
         });
 

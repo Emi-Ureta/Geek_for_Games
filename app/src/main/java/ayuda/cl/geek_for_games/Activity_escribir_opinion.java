@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,7 +29,7 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
         setContentView(R.layout.activity_escribir_opinion);
 
         //elemento spinner
-        Spinner spinner_op = (Spinner) findViewById(R.id.spinner_opinion);
+        Spinner spinner_op = findViewById(R.id.spinner_opinion);
 
         //Listener
         spinner_op.setOnItemSelectedListener( this);
@@ -51,30 +52,20 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
 
 
         Button btn_inicio = findViewById(R.id.Button_inicio_inicio);
-        btn_inicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_escribir_opinion.this, Activity_inicio.class));
-            }
-        });
+        btn_inicio.setOnClickListener(view -> startActivity(new Intent(Activity_escribir_opinion.this, Activity_inicio.class)));
 
         Button btn_favs = findViewById(R.id.Button_favoritos);
-        btn_favs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_escribir_opinion.this, Activity_lista_deseos.class));
-            }
-        });
+        btn_favs.setOnClickListener(view -> startActivity(new Intent(Activity_escribir_opinion.this, Activity_lista_deseos.class)));
 
 
         Button btn_mapa = findViewById(R.id.Button_mapa);
-        btn_mapa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_escribir_opinion.this, MapaActivity.class));
-                myRef.setValue("Ingreso de usuario al mapa desde ventana opinion");
-            }
+        btn_mapa.setOnClickListener(view -> {
+            startActivity(new Intent(Activity_escribir_opinion.this, MapaActivity.class));
+            myRef.setValue("Ingreso de usuario al mapa desde ventana opinion");
         });
+
+        Button publicar = findViewById(R.id.Button_opinion_publicar);
+        publicar.setOnClickListener(view -> Toast.makeText(Activity_escribir_opinion.this, "Vamos a verificar su opinión ¡Gracias!", Toast.LENGTH_LONG).show());
 
     }
 
@@ -86,4 +77,6 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
     public void onNothingSelected(AdapterView<?> parent) {
         // TODO Auto-generated method stub
     }
+
+
 }
