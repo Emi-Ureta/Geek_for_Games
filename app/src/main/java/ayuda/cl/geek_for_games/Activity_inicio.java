@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -17,6 +18,8 @@ public class Activity_inicio extends AppCompatActivity {
     FirebaseFirestore firestore;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    private Button logout;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("message");
@@ -28,7 +31,15 @@ public class Activity_inicio extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
+        logout = (Button) findViewById(R.id.Button_logout);
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Activity_inicio.this, Activity_login.class));
+            }
+        });
 
 
         TextView btn=findViewById(R.id.textView);

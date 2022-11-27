@@ -15,10 +15,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Activity_login extends AppCompatActivity implements View.OnClickListener {
@@ -31,6 +29,7 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
 
     private Button loginbtn;
     private EditText correo, contra;
+    private TextView olvide_contra;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,16 +39,22 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
 
         firestore = FirebaseFirestore.getInstance();
 
-        loginbtn = (Button)  findViewById(R.id.Button_iniciar_sesion);
+        loginbtn = (Button)  findViewById(R.id.Button_reset_contra);
         loginbtn.setOnClickListener(this);
 
-        correo = (EditText) findViewById(R.id.Edit_text_login_usuario);
+        correo = (EditText) findViewById(R.id.Edit_text_olvide_contra_usuario);
         contra = (EditText) findViewById(R.id.Edit_text_registro_contra);
 
         mAuth = FirebaseAuth.getInstance();
 
 
-
+        olvide_contra = (TextView) findViewById(R.id.Text_view_olvide_contra);
+        olvide_contra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_login.this, Activity_olvide_contra.class));
+            }
+        });
 
         TextView btn=findViewById(R.id.Text_view_crear_cuenta_login);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +68,7 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.Button_iniciar_sesion:
+            case R.id.Button_reset_contra:
                 Login_usuario();
                 break;
 

@@ -23,6 +23,7 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
 
     private FirebaseAuth mAuth;
 
+
     private EditText nombre, correo, contra, contra_verificar;
     private Button registrar;
 
@@ -37,13 +38,15 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        registrar = (Button) findViewById(R.id.Button_iniciar_sesion);
+        registrar = (Button) findViewById(R.id.Button_reset_contra);
         registrar.setOnClickListener(this);
 
         nombre = (EditText) findViewById(R.id.Edit_text_registro_usuario);
         correo = (EditText) findViewById(R.id.edit_text_registro_correo);
         contra = (EditText) findViewById(R.id.Edit_text_registro_contra);
         contra_verificar = (EditText) findViewById(R.id.Edit_text_registro_contra_verificar);
+
+
 
 
         //cambio activity a login
@@ -61,7 +64,7 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.Button_iniciar_sesion:
+            case R.id.Button_reset_contra:
                 registrar_usuario();
                 break;
 
@@ -117,7 +120,7 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
                         public void onComplete(@NonNull Task<Void> task) {
                              if(task.isSuccessful()){
                                  Toast.makeText(Activity_registrarse.this, "Usuario creado de manera exitosa", Toast.LENGTH_LONG).show();
-                                 startActivity(new Intent(Activity_registrarse.this, Activity_inicio.class));
+                                 startActivity(new Intent(Activity_registrarse.this, Activity_login.class));
                              }else{
                                  Toast.makeText(Activity_registrarse.this, "", Toast.LENGTH_LONG).show();
                              }
