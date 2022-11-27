@@ -34,7 +34,7 @@
             android:layout_marginStart="94dp"
             android:layout_marginTop="108dp"
             android:layout_marginEnd="92dp"
-            android:text="Geek for Games "
+            android:text="Geek for Games"
             android:textColor="#020202"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -77,7 +77,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/Edit_text_login_contra"
+            android:id="@+id/Edit_text_registro_contra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="102dp"
@@ -95,7 +95,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/edit_text_registro_contra_verificar"
+            android:id="@+id/Edit_text_registro_contra_verificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="102dp"
@@ -113,7 +113,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/Button_login_entrar"
+            android:id="@+id/Button_registrar"
             android:layout_width="186dp"
             android:layout_height="63dp"
             android:layout_marginStart="114dp"

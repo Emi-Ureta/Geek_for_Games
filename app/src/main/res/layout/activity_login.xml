@@ -31,7 +31,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Nombre de usuario"
+        android:hint="Correo"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Edit_text_login_contra"
+        android:id="@+id/Edit_text_registro_contra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/Button_login_entrar"
+        android:id="@+id/Button_registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="133dp"

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
@@ -25,9 +24,9 @@ public class Activity_login extends AppCompatActivity {
         firestore = FirebaseFirestore.getInstance();
 
         TextView usuario = (TextView) findViewById(R.id.Edit_text_login_usuario);
-        TextView contra = (TextView) findViewById(R.id.Edit_text_login_contra);
+        TextView contra = (TextView) findViewById(R.id.Edit_text_registro_contra);
 
-        MaterialButton loginbtn = (MaterialButton)  findViewById(R.id.Button_login_entrar);
+        MaterialButton loginbtn = (MaterialButton)  findViewById(R.id.Button_registrar);
 
 
 
