@@ -44,8 +44,8 @@
 
         <EditText
             android:id="@+id/Edit_text_registro_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
             android:layout_marginStart="102dp"
             android:layout_marginTop="208dp"
             android:layout_marginEnd="100dp"
@@ -61,8 +61,8 @@
 
         <EditText
             android:id="@+id/edit_text_registro_correo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
             android:layout_marginStart="102dp"
             android:layout_marginTop="272dp"
             android:layout_marginEnd="100dp"
@@ -77,9 +77,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/Edit_text_registro_contra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/Edit_text_login_contra"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
             android:layout_marginStart="102dp"
             android:layout_marginTop="332dp"
             android:layout_marginEnd="100dp"
@@ -96,8 +96,8 @@
 
         <EditText
             android:id="@+id/Edit_text_registro_contra_verificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
             android:layout_marginStart="102dp"
             android:layout_marginTop="396dp"
             android:layout_marginEnd="100dp"
@@ -113,7 +113,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/Button_reset_contra"
+            android:id="@+id/Button_login"
             android:layout_width="186dp"
             android:layout_height="63dp"
             android:layout_marginStart="114dp"

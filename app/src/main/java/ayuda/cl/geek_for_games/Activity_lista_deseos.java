@@ -28,29 +28,6 @@ public class Activity_lista_deseos extends AppCompatActivity implements AdapterV
         setContentView(R.layout.activity_lista_deseos);
 
 
-        //elemento spinner
-        Spinner spinner_lista_deseos = (Spinner) findViewById(R.id.spinner_deseos);
-
-        //Listener
-        spinner_lista_deseos.setOnItemSelectedListener(this);
-
-        //Elementos para spinner
-        List<String> plataforma_deseos = new ArrayList<>();
-        plataforma_deseos.add("PS5");
-        plataforma_deseos.add("Xbox X");
-        plataforma_deseos.add("PS4");
-        plataforma_deseos.add("Xbox 360");
-        plataforma_deseos.add("Nintendo Switch");
-        plataforma_deseos.add("PC");
-
-        //adaptador
-        ArrayAdapter<String> adaptador_deseos = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, plataforma_deseos);
-
-        adaptador_deseos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spinner_lista_deseos.setAdapter(adaptador_deseos);
-
-
         Button btn_inicio = findViewById(R.id.Button_inicio_inicio);
         btn_inicio.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,6 +3,7 @@ package ayuda.cl.geek_for_games;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -21,13 +22,14 @@ public class Activity_olvide_contra extends AppCompatActivity {
 
     FirebaseAuth auth;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_olvide_contra);
 
-        correo = (EditText) findViewById(R.id.Edit_text_olvide_contra_usuario);
-        reset = (Button) findViewById(R.id.Button_reset_contra);
+        correo = (EditText) findViewById(R.id.Edit_text_correo_login);
+        reset = (Button) findViewById(R.id.Button_login);
 
         auth = FirebaseAuth.getInstance();
 

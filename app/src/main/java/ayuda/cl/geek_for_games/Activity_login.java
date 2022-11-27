@@ -21,29 +21,24 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Activity_login extends AppCompatActivity implements View.OnClickListener {
 
-    FirebaseFirestore firestore;
-
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     FirebaseAuth mAuth;
 
     private Button loginbtn;
     private EditText correo, contra;
     private TextView olvide_contra;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        firestore = FirebaseFirestore.getInstance();
 
-        loginbtn = (Button)  findViewById(R.id.Button_reset_contra);
+        loginbtn = (Button)  findViewById(R.id.Button_login);
         loginbtn.setOnClickListener(this);
 
-        correo = (EditText) findViewById(R.id.Edit_text_olvide_contra_usuario);
-        contra = (EditText) findViewById(R.id.Edit_text_registro_contra);
+        correo = (EditText) findViewById(R.id.Edit_text_correo_login);
+        contra = (EditText) findViewById(R.id.Edit_text_login_contra);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -68,7 +63,7 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.Button_reset_contra:
+            case R.id.Button_login:
                 Login_usuario();
                 break;
 
@@ -100,14 +95,12 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-
-                    if(task.isSuccessful()){
                         startActivity(new Intent(Activity_login.this, Activity_inicio.class));
                     }else{
                         Toast.makeText(Activity_login.this, "Error al ingresar, vuelve a intentarlo", Toast.LENGTH_LONG).show();
                     }
                 }
-            }
+
         });
     }
 }

@@ -38,12 +38,12 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        registrar = (Button) findViewById(R.id.Button_reset_contra);
+        registrar = (Button) findViewById(R.id.Button_login);
         registrar.setOnClickListener(this);
 
         nombre = (EditText) findViewById(R.id.Edit_text_registro_usuario);
         correo = (EditText) findViewById(R.id.edit_text_registro_correo);
-        contra = (EditText) findViewById(R.id.Edit_text_registro_contra);
+        contra = (EditText) findViewById(R.id.Edit_text_login_contra);
         contra_verificar = (EditText) findViewById(R.id.Edit_text_registro_contra_verificar);
 
 
@@ -64,7 +64,7 @@ public class Activity_registrarse extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.Button_reset_contra:
+            case R.id.Button_login:
                 registrar_usuario();
                 break;
 
