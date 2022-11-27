@@ -2,6 +2,7 @@ package ayuda.cl.geek_for_games;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,34 +14,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Text;
+
 public class Activity_inicio extends AppCompatActivity {
 
-    FirebaseFirestore firestore;
-
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     private Button logout;
+    private TextView cuenta;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("message");
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-
-        firestore = FirebaseFirestore.getInstance();
-
-        logout = (Button) findViewById(R.id.Button_logout);
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Activity_inicio.this, Activity_login.class));
-            }
-        });
-
 
         TextView btn=findViewById(R.id.textView);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +63,15 @@ public class Activity_inicio extends AppCompatActivity {
                 myRef.setValue("Ingreso de usuario al mapa desde ventana inicio");
             }
         });
+
+        cuenta = (TextView) findViewById(R.id.Text_view_cuenta);
+        cuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_inicio.this, Activity_perfil_usuario.class));
+            }
+        });
+
 
 
 

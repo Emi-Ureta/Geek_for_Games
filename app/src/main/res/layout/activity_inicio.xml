@@ -71,14 +71,6 @@ tools:context=".MainActivity2">
             android:text="Mapa" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Button_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="415dp"
         android:layout_height="524dp"
@@ -221,6 +213,16 @@ tools:context=".MainActivity2">
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/Text_view_cuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="19dp"
+        android:text="cuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--carrusel o cardview para mostrar las plataformas posibles

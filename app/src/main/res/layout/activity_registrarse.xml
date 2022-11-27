@@ -122,7 +122,8 @@
             android:text="Crear cuenta"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Edit_text_registro_contra_verificar" />
 
         <TextView
             android:id="@+id/text_view_otro_ingreso"
