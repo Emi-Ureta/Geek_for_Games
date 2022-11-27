@@ -1,9 +1,8 @@
 package ayuda.cl.geek_for_games;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -13,19 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Activity_login extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth mAuth;
 
-    private Button loginbtn;
     private EditText correo, contra;
-    private TextView olvide_contra;
 
 
     @Override
@@ -34,39 +28,26 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_login);
 
 
-        loginbtn = (Button)  findViewById(R.id.Button_login);
+        Button loginbtn = findViewById(R.id.Button_login);
         loginbtn.setOnClickListener(this);
 
-        correo = (EditText) findViewById(R.id.Edit_text_correo_login);
-        contra = (EditText) findViewById(R.id.Edit_text_login_contra);
+        correo = findViewById(R.id.Edit_text_correo_login);
+        contra = findViewById(R.id.Edit_text_login_contra);
 
         mAuth = FirebaseAuth.getInstance();
 
 
-        olvide_contra = (TextView) findViewById(R.id.Text_view_olvide_contra);
-        olvide_contra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_login.this, Activity_olvide_contra.class));
-            }
-        });
+        TextView olvide_contra = findViewById(R.id.Text_view_olvide_contra);
+        olvide_contra.setOnClickListener(view -> startActivity(new Intent(Activity_login.this, Activity_olvide_contra.class)));
 
         TextView btn=findViewById(R.id.Text_view_crear_cuenta_login);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Activity_login.this, Activity_registrarse.class));
-            }
-        });
+        btn.setOnClickListener(view -> startActivity(new Intent(Activity_login.this, Activity_registrarse.class)));
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.Button_login:
-                Login_usuario();
-                break;
-
+        if (view.getId() == R.id.Button_login) {
+            Login_usuario();
         }
 
     }
@@ -91,16 +72,12 @@ public class Activity_login extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        mAuth.signInWithEmailAndPassword(Correo, Contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                        startActivity(new Intent(Activity_login.this, Activity_inicio.class));
-                    }else{
-                        Toast.makeText(Activity_login.this, "Error al ingresar, vuelve a intentarlo", Toast.LENGTH_LONG).show();
-                    }
+        mAuth.signInWithEmailAndPassword(Correo, Contra).addOnCompleteListener(task -> {
+            if (task.isSuccessful()){
+                    startActivity(new Intent(Activity_login.this, Activity_inicio.class));
+                }else{
+                    Toast.makeText(Activity_login.this, "Error al ingresar, vuelve a intentarlo", Toast.LENGTH_LONG).show();
                 }
-
-        });
+            });
     }
 }
