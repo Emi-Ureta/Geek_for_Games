@@ -131,7 +131,7 @@ tools:context=".MainActivity2">
                         android:layout_height="200dp"
                         android:layout_gravity="left"
                         android:layout_margin="10dp"
-                        android:src="@mipmap/ic_launcher_foreground" />
+                        android:src="@mipmap/ic_elden_foreground" />
 
                     <TextView
                         android:layout_width="wrap_content"
