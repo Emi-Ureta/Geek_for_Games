@@ -56,11 +56,10 @@
     app:layout_constraintBottom_toTopOf="@id/linearLayout">
 
 
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:background="@color/gunmetal">
 
 
         <LinearLayout
@@ -75,9 +74,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="9dp"
                 android:layout_marginTop="19dp"
+                android:text="Cuenta"
+                android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:text="Cuenta"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,12 +86,13 @@
                 android:id="@+id/TextView_ld_titulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="94dp"
-                android:layout_marginEnd="92dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
                 android:text="Lista de deseos"
-                android:textColor="#000000"
+                android:textColor="@color/white"
                 android:textSize="28sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -117,15 +118,13 @@
                     android:src="@mipmap/ic_launcher" />
 
 
-
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -148,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -165,14 +164,13 @@
                     android:src="@mipmap/ic_hollow_knight_round" />
 
 
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -189,14 +187,13 @@
                     android:src="@mipmap/ic_ragnarok" />
 
 
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -213,15 +210,13 @@
                     android:src="@mipmap/ic_cuphead" />
 
 
-
-
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/prussian_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -236,7 +231,6 @@
                     android:contentDescription="@string/app_name"
 
                     android:src="@mipmap/ic_control" />
-
 
 
             </androidx.cardview.widget.CardView>
