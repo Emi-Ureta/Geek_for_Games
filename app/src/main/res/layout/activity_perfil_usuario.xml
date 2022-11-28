@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_perfil_usuario">
+    tools:context=".Activity_perfil_usuario"
+    android:background="@color/gunmetal">
 
     <TextView
         android:id="@+id/Text_view_nombre"
@@ -13,6 +14,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="116dp"
         android:text="Nombre de usuario:"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Text_view_titulo_cuenta" />
 
@@ -23,6 +26,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="72dp"
         android:text="Correo:"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre" />
 
@@ -60,7 +65,7 @@
         android:layout_marginTop="108dp"
         android:layout_marginEnd="86dp"
         android:text="Geek for Games "
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre" />
 
@@ -82,6 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Text_view_correo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

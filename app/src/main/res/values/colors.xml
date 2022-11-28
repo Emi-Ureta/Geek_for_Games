@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gunmetal">#1B303B</color>
     <color name="prussian_blue">#09374A</color>
+    <color name="blue_sapphire">#346176</color>
+    <color name="dark_sky_blue">#88B4CC</color>
+    <color name="middle_blue">#81D6E3</color>
 </resources>

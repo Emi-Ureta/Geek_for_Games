@@ -7,44 +7,62 @@
     tools:context=".Activity_lista_deseos">
 
 
-<LinearLayout
-    android:id="@+id/linearLayout"
-    android:layout_width="412dp"
-    android:layout_height="57dp"
-    android:background="#000000"
-    android:orientation="horizontal"
-    android:translationZ="90dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="412dp"
+        android:layout_height="57dp"
+        android:background="@color/gunmetal"
+        android:orientation="horizontal"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 
-    <Button
-        android:id="@+id/Button_inicio_inicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Inicio" />
+        <Button
+            android:id="@+id/Button_inicio_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Inicio"
+            android:textSize="10dp"
+            android:theme="@style/Button.azul"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/home" />
 
-    <Button
-        android:id="@+id/Button_inicio_escribir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="opini" />
+        <Button
+            android:id="@+id/Button_inicio_escribir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reseña"
+            android:theme="@style/Button.azul"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/escribir"/>
 
-    <Button
-        android:id="@+id/Button_favoritos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Favs" />
+        <Button
+            android:id="@+id/Button_favoritos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favs"
+            android:textSize="10dp"
+            android:theme="@style/Button.azul"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/favs"/>
 
-    <Button
-        android:id="@+id/Button_mapa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Mapa" />
-</LinearLayout>
+        <Button
+            android:id="@+id/Button_mapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mapa"
+            android:textSize="10dp"
+            android:theme="@style/Button.azul"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/maps"
+            />
+    </LinearLayout>
 
 <LinearLayout
 

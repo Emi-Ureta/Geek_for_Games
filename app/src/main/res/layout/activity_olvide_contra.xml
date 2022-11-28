@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_olvide_contra">
+    tools:context=".Activity_olvide_contra"
+    android:background="@color/gunmetal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             android:layout_marginTop="108dp"
             android:layout_marginEnd="92dp"
             android:text="Geek for Games "
-            android:textColor="#020202"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,17 +37,20 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="360dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableLeft="@drawable/email"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Correo"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/Button_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/dark_sky_blue"/>
 
         <Button
             android:id="@+id/Button_login"
@@ -69,7 +73,7 @@
             android:layout_marginEnd="175dp"
             android:text="Por favor ingrese su correo para realizar el cambio de contraseña"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/Edit_text_correo_login"
             app:layout_constraintEnd_toEndOf="parent"
