@@ -86,9 +86,9 @@
                 android:id="@+id/TextView_ld_titulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="94dp"
+                android:layout_marginEnd="92dp"
                 android:text="Lista de deseos"
                 android:textColor="#000000"
                 android:textSize="28sp"
@@ -114,17 +114,9 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_launcher_foreground" />
+                    android:src="@mipmap/ic_launcher" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+
 
 
             </androidx.cardview.widget.CardView>
@@ -147,17 +139,7 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_darkwood_foreground" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:src="@mipmap/ic_darkwood" />
 
 
             </androidx.cardview.widget.CardView>
@@ -180,17 +162,8 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_hollow_knight_foreground" />
+                    android:src="@mipmap/ic_hollow_knight_round" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
 
             </androidx.cardview.widget.CardView>
@@ -213,17 +186,8 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_ragnarok_foreground" />
+                    android:src="@mipmap/ic_ragnarok" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
 
             </androidx.cardview.widget.CardView>
@@ -246,17 +210,9 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_cuphead_foreground" />
+                    android:src="@mipmap/ic_cuphead" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+
 
 
             </androidx.cardview.widget.CardView>
@@ -279,17 +235,8 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/app_name"
 
-                    android:src="@mipmap/ic_control_foreground" />
+                    android:src="@mipmap/ic_control" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/app_name"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
 
             </androidx.cardview.widget.CardView>
