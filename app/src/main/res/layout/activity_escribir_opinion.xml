@@ -24,44 +24,47 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Inicio"
-            android:textSize="10dp"
+            android:textSize="10sp"
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/home" />
+            android:drawableLeft="@drawable/home"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SmallSp" />
 
         <Button
             android:id="@+id/Button_inicio_escribir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Reseña"
+            android:text="@string/rese_a"
             android:theme="@style/Button.azul"
-            android:textSize="10dp"
+            android:textSize="10sp"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/escribir"/>
+            android:drawableLeft="@drawable/escribir"
+            tools:ignore="ButtonStyle,RtlHardcoded,SmallSp" />
 
         <Button
             android:id="@+id/Button_favoritos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Favs"
-            android:textSize="10dp"
+            android:text="@string/favs"
+            android:textSize="10sp"
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/favs"/>
+            android:drawableLeft="@drawable/favs"
+            tools:ignore="ButtonStyle,RtlHardcoded,SmallSp" />
 
         <Button
             android:id="@+id/Button_mapa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mapa"
-            android:textSize="10dp"
+            android:text="@string/mapa"
+            android:textSize="10sp"
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
             android:drawableLeft="@drawable/maps"
-            />
+            tools:ignore="ButtonStyle,RtlHardcoded,SmallSp,SpUsage" />
     </LinearLayout>
 
     <EditText
@@ -73,7 +76,7 @@
         android:layout_marginBottom="208dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Escriba su reseña aquí..."
+        android:hint="@string/escriba_su_rese_a_aqu"
         android:inputType="textMultiLine"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -82,7 +85,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_opinion"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/Text_opinion_nombre"
@@ -92,7 +96,7 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="Nombre del juego"
+        android:hint="@string/nombre_del_juego"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHighlight="@color/dark_sky_blue"
@@ -100,7 +104,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextView_opcion_op" />
+        app:layout_constraintTop_toBottomOf="@+id/TextView_opcion_op"
+        android:autofillHints="" />
 
     <Spinner
         android:id="@+id/spinner_opinion"
@@ -126,7 +131,8 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
         app:layout_constraintVertical_bias="1.0"
         android:theme="@style/Button.azul"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
 
     <RadioButton
         android:id="@+id/RadioButton_op_anonima"
@@ -137,7 +143,8 @@
         android:text="Anónima"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <RadioButton
         android:id="@+id/RadioButton_op_cuenta"
@@ -148,7 +155,8 @@
         android:text="Cuenta de usuario"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/TextView_opcion_op"
@@ -166,7 +174,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/Text_view_cuenta"
@@ -179,6 +188,7 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

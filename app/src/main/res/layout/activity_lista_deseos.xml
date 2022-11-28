@@ -27,7 +27,8 @@
             android:textSize="10dp"
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/home" />
+            android:drawableLeft="@drawable/home"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
 
         <Button
             android:id="@+id/Button_inicio_escribir"
@@ -38,7 +39,8 @@
             android:theme="@style/Button.azul"
             android:textSize="10dp"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/escribir"/>
+            android:drawableLeft="@drawable/escribir"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
 
         <Button
             android:id="@+id/Button_favoritos"
@@ -49,7 +51,8 @@
             android:textSize="10dp"
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/favs"/>
+            android:drawableLeft="@drawable/favs"
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
 
         <Button
             android:id="@+id/Button_mapa"
@@ -61,7 +64,7 @@
             android:theme="@style/Button.azul"
             android:textColor="@color/white"
             android:drawableLeft="@drawable/maps"
-            />
+            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,SpUsage" />
     </LinearLayout>
 
 <LinearLayout
@@ -77,7 +80,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/gunmetal">
+        android:background="@color/gunmetal"
+        tools:ignore="UselessParent">
 
 
         <LinearLayout
@@ -97,7 +101,8 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage" />
 
 
             <TextView
@@ -113,7 +118,8 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

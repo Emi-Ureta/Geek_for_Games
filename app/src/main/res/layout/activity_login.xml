@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/Edit_text_correo_login"
@@ -41,7 +41,9 @@
         android:backgroundTint="@color/dark_sky_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
     <EditText
         android:id="@+id/Edit_text_login_contra"
@@ -61,7 +63,9 @@
         android:backgroundTint="@color/dark_sky_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""
+        tools:ignore="Deprecated,HardcodedText,RtlHardcoded" />
 
     <Button
         android:id="@+id/Button_login"
@@ -74,7 +78,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:theme="@style/Button.azul"/>
+        android:theme="@style/Button.azul"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/Text_view_olvide_contra"
@@ -91,7 +96,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,KeyboardInaccessibleWidget" />
 
 
     <LinearLayout
@@ -102,7 +108,8 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UselessLeaf" />
 
     <TextView
         android:id="@+id/Text_view_crear_cuenta_login"
@@ -117,7 +124,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
 
 

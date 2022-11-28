@@ -42,7 +42,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/Edit_text_registro_usuario"
@@ -62,7 +63,9 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:backgroundTint="@color/dark_sky_blue"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:autofillHints=""
+            tools:ignore="RtlHardcoded" />
 
         <EditText
             android:id="@+id/edit_text_registro_correo"
@@ -82,7 +85,9 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:backgroundTint="@color/dark_sky_blue"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:autofillHints=""
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/Edit_text_login_contra"
@@ -103,7 +108,9 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:backgroundTint="@color/dark_sky_blue"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            tools:ignore="Deprecated,HardcodedText"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/Edit_text_registro_contra_verificar"
@@ -124,7 +131,9 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:backgroundTint="@color/dark_sky_blue"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:autofillHints=""
+            tools:ignore="Deprecated,HardcodedText" />
 
         <Button
             android:id="@+id/Button_login"
@@ -138,7 +147,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Edit_text_registro_contra_verificar"
-            android:theme="@style/Button.azul"/>
+            android:theme="@style/Button.azul"
+            tools:ignore="HardcodedText" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,7 +158,8 @@
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="UselessLeaf" />
 
 
 

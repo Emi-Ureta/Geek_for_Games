@@ -1,4 +1,5 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Geek_for_Games</string>
     <string name="title_activity_mapa">Activity_mapa</string>
     <string name="title_activity_maps">MapsActivity</string>
@@ -8,4 +9,9 @@
     <string name="por_favor_ingrese_su_correo_para_realizar_el_cambio_de_contrase_a">Por favor ingrese su correo para realizar el cambio de contraseña</string>
     <string name="ya_tiene_cuenta">¿Ya tiene cuenta?</string>
     <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="rese_a">Reseña</string>
+    <string name="favs">Favs</string>
+    <string name="mapa">Mapa</string>
+    <string name="escriba_su_rese_a_aqu" tools:ignore="TypographyEllipsis">Escriba su reseña aquí...</string>
+    <string name="nombre_del_juego">Nombre del juego</string>
 </resources>

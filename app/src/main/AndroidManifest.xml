@@ -81,7 +81,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity_inicio"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

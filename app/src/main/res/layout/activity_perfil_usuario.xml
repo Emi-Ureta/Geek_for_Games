@@ -17,7 +17,8 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_view_titulo_cuenta" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_view_titulo_cuenta"
+        tools:ignore="HardcodedText,MissingPrefix,SpUsage" />
 
     <TextView
         android:id="@+id/Text_view_correo"
@@ -29,7 +30,8 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre"
+        tools:ignore="HardcodedText,SpUsage" />
 
     <Button
         android:id="@+id/Button_cambiar_contra"
@@ -42,7 +44,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Button_salir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/Button_salir"
@@ -55,7 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/Text_view_titulo_cuenta"
@@ -70,7 +74,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/nombre"
@@ -82,7 +87,8 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_view_nombre"
+        tools:ignore="SpUsage" />
 
     <TextView
         android:id="@+id/correo"
@@ -94,5 +100,6 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Text_view_correo" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_view_correo"
+        tools:ignore="SpUsage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
