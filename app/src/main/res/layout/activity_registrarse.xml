@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_registrarse">
+    tools:context=".Activity_registrarse"
+    android:background="@color/gunmetal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,12 +21,13 @@
             android:layout_marginStart="144dp"
             android:layout_marginEnd="140dp"
             android:layout_marginBottom="28dp"
-            android:text="¿Ya tiene cuenta?"
+            android:text="@string/ya_tiene_cuenta"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/Text_view_titulo"
@@ -35,7 +37,7 @@
             android:layout_marginTop="108dp"
             android:layout_marginEnd="92dp"
             android:text="Geek for Games"
-            android:textColor="#020202"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,15 +51,18 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="208dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableLeft="@drawable/person"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Nombre de usuario"
+            android:hint="@string/nombre_de_usuario"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_sky_blue"
+            android:textColorHint="@color/white"/>
 
         <EditText
             android:id="@+id/edit_text_registro_correo"
@@ -66,7 +71,7 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="272dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/email"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Correo"
@@ -74,7 +79,10 @@
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_sky_blue"
+            android:textColorHint="@color/white"/>
 
         <EditText
             android:id="@+id/Edit_text_login_contra"
@@ -83,7 +91,7 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="332dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawableStart="@drawable/info"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Contraseña"
@@ -92,7 +100,10 @@
             android:password="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_sky_blue"
+            android:textColorHint="@color/white"/>
 
         <EditText
             android:id="@+id/Edit_text_registro_contra_verificar"
@@ -101,7 +112,7 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="396dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawableStart="@drawable/info"
             android:drawablePadding="10dp"
             android:ems="10"
             android:hint="Verificar contraseña"
@@ -110,7 +121,10 @@
             android:password="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_sky_blue"
+            android:textColorHint="@color/white"/>
 
         <Button
             android:id="@+id/Button_login"
@@ -123,21 +137,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Edit_text_registro_contra_verificar" />
-
-        <TextView
-            android:id="@+id/text_view_otro_ingreso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="161dp"
-            android:layout_marginEnd="160dp"
-            android:layout_marginBottom="136dp"
-            android:text="Ingresar con"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/Edit_text_registro_contra_verificar"
+            android:theme="@style/Button.azul"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,17 +148,8 @@
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"/>
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/icons8_google"
-                tools:layout_editor_absoluteX="184dp"
-                tools:layout_editor_absoluteY="508dp" />
-
-        </LinearLayout>
-        <!-- Opción de ingresar con gmail y guardar los datos a firebase-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

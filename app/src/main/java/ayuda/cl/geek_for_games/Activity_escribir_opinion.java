@@ -65,11 +65,17 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
             myRef.setValue("Ingreso de usuario al mapa desde ventana opinion");
         });
 
+
         Button publicar = findViewById(R.id.Button_opinion_publicar);
         publicar.setOnClickListener(view -> Toast.makeText(Activity_escribir_opinion.this, "Vamos a verificar su opinión ¡Gracias!", Toast.LENGTH_LONG).show());
 
+
+
         TextView cuenta = findViewById(R.id.Text_view_cuenta);
         cuenta.setOnClickListener(view -> startActivity(new Intent(Activity_escribir_opinion.this, Activity_perfil_usuario.class)));
+
+
+
 
     }
 
@@ -81,6 +87,8 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
     public void onNothingSelected(AdapterView<?> parent) {
         // TODO Auto-generated method stub
     }
+
+
 
 
 }

@@ -2,4 +2,10 @@
     <string name="app_name">Geek_for_Games</string>
     <string name="title_activity_mapa">Activity_mapa</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="geek_for_games">Geek for Games</string>
+    <string name="correo">Correo</string>
+    <string name="cambiar_contrase_a">Cambiar Contraseña</string>
+    <string name="por_favor_ingrese_su_correo_para_realizar_el_cambio_de_contrase_a">Por favor ingrese su correo para realizar el cambio de contraseña</string>
+    <string name="ya_tiene_cuenta">¿Ya tiene cuenta?</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
 </resources>

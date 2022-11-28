@@ -21,7 +21,7 @@
             android:layout_marginStart="94dp"
             android:layout_marginTop="108dp"
             android:layout_marginEnd="92dp"
-            android:text="Geek for Games "
+            android:text="@string/geek_for_games"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -37,10 +37,10 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="360dp"
             android:layout_marginEnd="100dp"
-            android:drawableLeft="@drawable/email"
+            android:drawableStart="@drawable/email"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Correo"
+            android:hint="@string/correo"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="@color/white"
@@ -50,7 +50,8 @@
             app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:backgroundTint="@color/dark_sky_blue"/>
+            android:backgroundTint="@color/dark_sky_blue"
+            android:autofillHints="" />
 
         <Button
             android:id="@+id/Button_login"
@@ -59,11 +60,12 @@
             android:layout_marginStart="133dp"
             android:layout_marginEnd="128dp"
             android:layout_marginBottom="216dp"
-            android:text="Cambiar Contraseña"
+            android:text="@string/cambiar_contrase_a"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.55"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/Button.azul"/>
 
         <TextView
             android:id="@+id/textView3"
@@ -71,7 +73,7 @@
             android:layout_height="47dp"
             android:layout_marginStart="181dp"
             android:layout_marginEnd="175dp"
-            android:text="Por favor ingrese su correo para realizar el cambio de contraseña"
+            android:text="@string/por_favor_ingrese_su_correo_para_realizar_el_cambio_de_contrase_a"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="16sp"
