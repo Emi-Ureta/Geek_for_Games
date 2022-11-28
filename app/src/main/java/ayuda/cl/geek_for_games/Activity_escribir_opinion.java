@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -66,6 +67,9 @@ public class Activity_escribir_opinion extends AppCompatActivity implements Adap
 
         Button publicar = findViewById(R.id.Button_opinion_publicar);
         publicar.setOnClickListener(view -> Toast.makeText(Activity_escribir_opinion.this, "Vamos a verificar su opinión ¡Gracias!", Toast.LENGTH_LONG).show());
+
+        TextView cuenta = findViewById(R.id.Text_view_cuenta);
+        cuenta.setOnClickListener(view -> startActivity(new Intent(Activity_escribir_opinion.this, Activity_perfil_usuario.class)));
 
     }
 

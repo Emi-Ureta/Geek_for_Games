@@ -41,6 +41,8 @@ public class Activity_inicio extends AppCompatActivity {
         TextView cuenta = findViewById(R.id.Text_view_cuenta);
         cuenta.setOnClickListener(view -> startActivity(new Intent(Activity_inicio.this, Activity_perfil_usuario.class)));
 
+        TextView prueba = findViewById(R.id.textView);
+        prueba.setOnClickListener(view -> startActivity(new Intent(Activity_inicio.this, MainActivity2.class)));
 
 
 

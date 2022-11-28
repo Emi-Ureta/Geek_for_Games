@@ -209,8 +209,20 @@ tools:context=".MainActivity2">
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="19dp"
-        android:text="cuenta"
+        android:text="Cuenta"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="45dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
 
